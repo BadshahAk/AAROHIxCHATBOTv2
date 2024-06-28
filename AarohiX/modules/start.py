@@ -79,7 +79,7 @@ EMOJIOS = [
 
 #---------------EMOJIOS---------------#
 
-@AarohiX.on_cmd(["start", "aistart"])
+@AarohiX.on_cmd(["Softystart", "aistart"])
 async def start(_, m: Message):
     if m.chat.type == ChatType.PRIVATE:
         accha = await m.reply_text(
@@ -111,7 +111,7 @@ async def start(_, m: Message):
         await add_served_chat(m.chat.id)
 
 
-@AarohiX.on_cmd("help")
+@AarohiX.on_cmd("Softyhelp")
 async def help(client: AarohiX, m: Message):
     if m.chat.type == ChatType.PRIVATE:
         hmm = await m.reply_photo(
@@ -129,7 +129,7 @@ async def help(client: AarohiX, m: Message):
         await add_served_chat(m.chat.id)
 
 
-@AarohiX.on_cmd("repo")
+@AarohiX.on_cmd("Softyrepo")
 async def repo(_, m: Message):
     await m.reply_text(
         text=SOURCE_READ,
